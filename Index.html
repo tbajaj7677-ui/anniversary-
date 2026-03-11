@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Celebrating 19 Years Together</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+overflow:hidden;
+}
+
+/* slides */
+
+.slide{
+display:none;
+height:100vh;
+width:100vw;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.active{
+display:flex;
+}
+
+/* backgrounds */
+
+.pink{
+background:#ffc0cb;
+}
+
+.red{
+background:#d62828;
+color:white;
+}
+
+/* heading */
+
+h1{
+font-size:48px;
+margin-bottom:25px;
+}
+
+/* button */
+
+.next{
+position:absolute;
+bottom:30px;
+right:30px;
+padding:12px 24px;
+font-size:16px;
+border:none;
+border-radius:10px;
+background:black;
+color:white;
+cursor:pointer;
+}
+
+/* image */
+
+.main-img{
+width:350px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* timeline */
+
+.timeline{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:40px;
+max-width:90%;
+}
+
+.event{
+min-width:180px;
+background:white;
+color:black;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+.year{
+font-weight:bold;
+margin-bottom:5px;
+}
+
+/* gallery */
+
+.gallery{
+display:flex;
+gap:25px;
+}
+
+.gallery img{
+width:250px;
+border-radius:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Slide 1 -->
+
+<div class="slide pink active" id="slide1">
+<h1>CELEBRATING 19 YEARS TOGETHER!</h1>
+<img src="parents.jpg" class="main-img">
+<button class="next" onclick="nextSlide()">Next →</button>
+</div>
+
+<!-- Slide 2 -->
+
+<div class="slide red" id="slide2">
+<h1>OUR JOURNEY</h1>
+
+<div class="timeline">
+<div class="event"><div class="year">2007</div>married hehehe</div>
+<div class="event"><div class="year">2008</div>tanya hehehe</div>
+<div class="event"><div class="year">2009</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2010</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2011</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2012</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2013</div>cocooo hehehe</div>
+<div class="event"><div class="year">2014</div>mithu 1 hehehe</div>
+<div class="event"><div class="year">2015</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2016</div>arzuuu hehehe</div>
+<div class="event"><div class="year">2017</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2018</div>doa doa doa hehehe</div>
+<div class="event"><div class="year">2019</div>mithuuu hehehe</div>
+<div class="event"><div class="year">2020</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2021</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2022</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2023</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2024</div>thailanddd hehehe</div>
+<div class="event"><div class="year">2025</div>pata nhi hehehe</div>
+<div class="event"><div class="year">2026</div>fluffy hehehe</div>
+</div>
+
+<button class="next" onclick="nextSlide()">Next →</button>
+</div>
+
+<!-- Slide 3 -->
+
+<div class="slide pink" id="slide3">
+<h1>OUR FAMILY ❤️</h1>
+
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+
+</div>
+
+<script>
+
+let slide=1;
+
+function nextSlide(){
+document.getElementById("slide"+slide).classList.remove("active");
+slide++;
+document.getElementById("slide"+slide).classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
